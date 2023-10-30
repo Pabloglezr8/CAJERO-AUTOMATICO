@@ -9,19 +9,21 @@
 }
 
 body {
-    background: radial-gradient(#f0f0f0, #747474);
+    background: linear-gradient( #f0f0f0, #8d8d8c);
     text-align: center;
     display: flex;
     justify-content: center;
+    height: 97.5vh;
 }
 
 .container {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 500px;
+    height: 650px;
     padding: 20px;
     background-color: #99eb46;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 20px #99eb46;
+    box-shadow: 0px 0px 10px 10px #d1d1d0;
 }
 
 .title{
@@ -37,14 +39,14 @@ body {
     font-size: 20px;
     padding: 20px;
     border: solid #f02f66;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: none;
-    box-shadow: inset 1px 1px 1px 2px grey;
+    box-shadow: 0px 5px 0px 1px grey;
 }
 
 .button:active{
-    border: solid rgb(39, 39, 39);
-    color:#f02f66 ;
+    box-shadow: none;
+    transform: translateY(3px);
 }
 
 .button:hover{
