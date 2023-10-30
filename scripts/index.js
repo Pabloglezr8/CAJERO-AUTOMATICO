@@ -6,10 +6,10 @@ let correctPswrd = "1234";
 
 function mostrarSaldo() {
     const message = document.getElementById("message")
-    message.textContent = `Su saldo es: ${saldo}`
+    message.textContent = `Su saldo es: ${saldo}€`
 }
 
-/*function inicioSesion() {
+function inicioSesion() {
     const pswrd = prompt("Ingrese la contraseña: ")
 
     while (tries > 1 && pswrd !== correctPswrd) {
@@ -26,7 +26,7 @@ function mostrarSaldo() {
         mostrarSaldo()
     }
 
-}*/
+}
 
 
 function depositar() {
@@ -59,7 +59,7 @@ function transferir() {
     } else {
         const cuenta = prompt("Numero de cuneta: ")
 
-        if (/^ES\d{22}$/.test(cuenta) === false) {
+        if (/^(ES\d{22})$/.test(cuenta) === false) {
             alert("Numero de cuneta no válido")
         } else {
             saldo -= transferir;
@@ -70,17 +70,18 @@ function transferir() {
 
 function changePswrd() {
     const pswrd = prompt("Ingrese su contraseña: ")
-    
+
     if (pswrd === correctPswrd) {
         const newPswrd = prompt("Nueva contraseña: ")
         correctPswrd = newPswrd
         console.log("La nueva contraseña es: " + correctPswrd)
-    }else{
+    } else {
         alert("Contraseña incorrecta. No se puede cambiar la contraseña")
     }
 
 }
 
-function exit (){
+function exit() {
     window.location.replace("/templates/exit.html")
 }
+
