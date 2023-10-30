@@ -24,7 +24,7 @@ function inicioSesion() {
         tries--
         alert(`Constraseña incorrecta le quedan ${tries}`)
         prompt("Ingrese la contraseña: ")
-
+        return;
     }
 
     if (pswrd !== correctPswrd) {
