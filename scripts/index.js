@@ -3,17 +3,20 @@ Autor: Pablo Gonzalez Ruiz
 GitHub: https://github.com/Pabloglezr8/CAJERO-AUTOMATICO.git
 */
 
+//cuando carga la página lo primero que se ejecuta es la funcion de iniciar sesión
 window.addEventListener("load", inicioSesion);
 
 let saldo = 1000;
 let tries = 3;
 let correctPswrd = "1234";
 
+//funcion para mostrar el saldo
 function mostrarSaldo() {
     const message = document.getElementById("message")
     message.textContent = `Su saldo es: ${saldo}€`
 }
 
+//funcion para iniciar sesion
 function inicioSesion() {
     const pswrd = prompt("Ingrese la contraseña: ")
 
@@ -33,7 +36,7 @@ function inicioSesion() {
 
 }
 
-
+// funcion para ingresar dinero
 function depositar() {
     const depositar = parseFloat(prompt("Cantidad a depositar: "))
 
@@ -45,6 +48,7 @@ function depositar() {
     }
 }
 
+//funcion para retirar dinero
 function retirar() {
     const retirar = parseFloat(prompt("Cantidad a retirar: "))
 
@@ -56,6 +60,7 @@ function retirar() {
     }
 }
 
+//funcion para transferir
 function transferir() {
     const transferir = parseFloat(prompt("Cantidad a transferir: "))
 
@@ -73,6 +78,7 @@ function transferir() {
     }
 }
 
+//funcion para cambiar la contraseña
 function changePswrd() {
     const pswrd = prompt("Ingrese su contraseña: ")
 
@@ -86,6 +92,7 @@ function changePswrd() {
 
 }
 
+//funcion para cuando salimos del cajero
 function exit() {
     window.location.replace("/templates/exit.html")
 }
