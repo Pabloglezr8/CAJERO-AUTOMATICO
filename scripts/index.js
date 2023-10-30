@@ -1,15 +1,15 @@
-window.addEventListener("load", inicioSesion);
+//window.addEventListener("load", inicioSesion);
 
 let saldo = 1000;
 let tries = 3;
-const correctPswrd = "1234";
+let correctPswrd = "1234";
 
 function mostrarSaldo() {
     const message = document.getElementById("message")
     message.textContent = `Su saldo es: ${saldo}`
 }
 
-function inicioSesion() {
+/*function inicioSesion() {
     const pswrd = prompt("Ingrese la contraseña: ")
 
     while (tries > 1 && pswrd !== correctPswrd) {
@@ -20,13 +20,13 @@ function inicioSesion() {
     }
 
     if (pswrd !== correctPswrd) {
-        window.location.replace("/templates/bloqueado.html")
+        window.location.replace("/templates/block.html")
     } else {
         alert("Se ha iniciado sesión con éxito")
         mostrarSaldo()
     }
 
-}
+}*/
 
 
 function depositar() {
@@ -74,9 +74,13 @@ function changePswrd() {
     if (pswrd === correctPswrd) {
         const newPswrd = prompt("Nueva contraseña: ")
         correctPswrd = newPswrd
-        console.log(correctPswrd)
+        console.log("La nueva contraseña es: " + correctPswrd)
     }else{
         alert("Contraseña incorrecta. No se puede cambiar la contraseña")
     }
 
+}
+
+function exit (){
+    window.location.replace("/templates/exit.html")
 }
