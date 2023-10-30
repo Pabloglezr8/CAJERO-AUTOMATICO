@@ -1,4 +1,9 @@
-//window.addEventListener("load", inicioSesion);
+/*
+Autor: Pablo Gonzalez Ruiz
+GitHub: https://github.com/Pabloglezr8/CAJERO-AUTOMATICO.git
+*/
+
+window.addEventListener("load", inicioSesion);
 
 let saldo = 1000;
 let tries = 3;
