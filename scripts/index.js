@@ -13,7 +13,7 @@ let correctPswrd = "1234";
 //funcion para mostrar el saldo
 function mostrarSaldo() {
     const message = document.getElementById("message")
-    message.textContent = `Su saldo es: ${saldo}€`
+    message.textContent = `Su saldo es: ${saldo.toFixed(2)}€`
 }
 
 //funcion para iniciar sesion
